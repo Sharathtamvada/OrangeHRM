@@ -1,9 +1,9 @@
-@echo off
-REM Activate virtual environment
-call .venv\Scripts\activate
+#!/bin/bash
+# Activate virtual environment
+source .venv/bin/activate
 
-REM Run pytest with specific options
+# Run pytest with specific options
 pytest -s -v -m "sanity"
 
-REM Pause to view output
-pause
+# Pause to view output
+read -p "Press Enter to continue..."
