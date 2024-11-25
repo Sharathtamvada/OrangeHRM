@@ -21,12 +21,8 @@ class TestLogin:
         self.lp = LoginPage(self.driver)
         self.lp.setUserName(user)
         self.lp.setPassword(password)
-        self.driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + "test_Login.png")
         self.lp.clickLogin()
+        self.driver.save_screenshot(
+            os.path.abspath(os.curdir) + "\\screenshots\\" + "test_Login.png"
+        )
         self.driver.close()
-
-
-
-
-
-
