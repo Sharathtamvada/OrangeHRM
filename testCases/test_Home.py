@@ -1,11 +1,11 @@
 from selenium import webdriver
 from pageObjects.LoginPageObjects import LoginPage
-from pageObjects.AdminPageObjects import AdminPage
+from pageObjects.HomePageObjects import HomePage
 import os
 from utilities.readProperties import ReadConfig
 
-class TestAdminPage:
-    def test_Admin_Page(self):
+class TestHomePage:
+    def test_Home_Page(self):
         baseURL = ReadConfig.getApplicationURL()
         user = ReadConfig.getUseremail()
         password = ReadConfig.getPassword()
@@ -15,19 +15,13 @@ class TestAdminPage:
         self.driver.get(baseURL)
         self.driver.maximize_window()
 
-        # Initialize the LoginPage object
+        # Initialize the HomePage object
         self.driver.implicitly_wait(10)
         self.lp = LoginPage(self.driver)
         self.lp.setUserName(user)
         self.lp.setPassword(password)
         self.lp.clickLogin()
-        self.ap = AdminPage(self.driver)
-        self.ap.clickAdmin()
-        self.driver.implicitly_wait(10)
-        self.ap.name_displayed()
-        self.ap.clickJob()
-        self.ap.clickJobTitles()
-        self.ap.clickAccount()
-        self.driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + "test_Login1.png")
-        self.ap.clickChangePassword()
+        self.hp = HomePage(self.driver)
+        self.hp.clickTimesheets()
+        self.driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + "timesheets_page.png")
         self.driver.close()

@@ -1,6 +1,7 @@
 import pytest
 from selenium import webdriver
 from pageObjects.LoginPageObjects import LoginPage
+from pageObjects.HomePageObjects import HomePage
 import os
 from utilities.readProperties import ReadConfig
 
@@ -23,6 +24,6 @@ class TestLogin:
         self.lp.setPassword(password)
         self.lp.clickLogin()
         self.driver.save_screenshot(
-            os.path.abspath(os.curdir) + "\\screenshots\\" + "test_Login.png"
+            os.path.abspath(os.curdir) + "\\screenshots\\" + "home_page.png"
         )
         self.driver.close()
