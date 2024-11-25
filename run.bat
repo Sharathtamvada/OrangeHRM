@@ -1,9 +1,4 @@
-#!/bin/bash
-# Activate virtual environment
-source .venv/bin/activate
-
-# Run pytest with specific options
-pytest -s -v -m "sanity"
-
-# Pause to view output
-read -p "Press Enter to continue..."
+coverage erase
+coverage run -m pytest --junitxml=junit-{envname}.xml
+coverage report
+coverage xml -i -o coverage-{envname}.xml
