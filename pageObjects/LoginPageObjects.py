@@ -23,6 +23,3 @@ class LoginPage():
 
     def clickLogin(self):
         self.driver.find_element(By.ID,self.button_signin_id).click()
-
-    def setOldPassword(self):
-        pass

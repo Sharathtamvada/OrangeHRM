@@ -5,7 +5,7 @@ class HomePage():
     # Locators
     btn_timesheets_xpath = "/html/body/app-root/div/div/div/div/app-home/div/div/div/div/ngx-slick-carousel/div/div/div[2]/div/div/h2"
     btn_employees_xpath = "/html/body/app-root/div/div/div/div/app-home/div/div/div/div/ngx-slick-carousel/div/div/div[3]/div/div/h2"
-    btn_programs_xpath = "/html/body/app-root/div/div/div/div/app-home/div/div/div/div/ngx-slick-carousel/div/div/div[3]/div/div/h2"
+    btn_programs_xpath = "/html/body/app-root/div/div/div/div/app-home/div/div/div/div/ngx-slick-carousel/div/div/div[4]/div/div/h2"
     btn_sliderright_xpath = "/html/body/app-root/div/div/div/div/app-home/div/div/div/div/ngx-slick-carousel/button[2]"
     btn_sliderleft_xpath = "/html/body/app-root/div/div/div/div/app-home/div/div/div/div/ngx-slick-carousel/button[1]"
     btn_home_xpath = "/html/body/app-root/div/div[2]/div/div/app-breadcrumb/div/nav/div/a[1]"
