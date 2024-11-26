@@ -1,5 +1,6 @@
 from selenium import webdriver
 from pageObjects.LoginPageObjects import LoginPage
+from pageObjects.HomePageObjects import HomePage
 from pageObjects.DashboardPageObjects import DashboardPage
 import os
 from utilities.readProperties import ReadConfig
@@ -22,10 +23,12 @@ class TestDashboardPage:
         self.lp.setPassword(password)
         self.lp.clickLogin()
         self.driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + "home_page.png")
+        self.hp = HomePage(self.driver)
+        self.hp.clickTimesheets()
         self.dp = DashboardPage(self.driver)
+        self.dp.clickCollapse()
         self.dp.selectTimesheets()
         self.driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + "timesheets_page.png")
-        self.dp.clickCollapse()
         self.dp.selectEmployees()
         self.driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + "employees_page.png")
         self.dp.selectPrograms()
