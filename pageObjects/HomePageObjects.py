@@ -8,6 +8,7 @@ class HomePage():
     btn_programs_xpath = "/html/body/app-root/div/div/div/div/app-home/div/div/div/div/ngx-slick-carousel/div/div/div[3]/div/div/h2"
     btn_sliderright_xpath = "/html/body/app-root/div/div/div/div/app-home/div/div/div/div/ngx-slick-carousel/button[2]"
     btn_sliderleft_xpath = "/html/body/app-root/div/div/div/div/app-home/div/div/div/div/ngx-slick-carousel/button[1]"
+    btn_home_xpath = "/html/body/app-root/div/div[2]/div/div/app-breadcrumb/div/nav/div/a[1]"
     # constructor
     def __init__(self,driver):
         self.driver=driver
@@ -27,3 +28,6 @@ class HomePage():
 
     def clickSliderLeft(self):
         self.driver.find_element(By.XPATH,self.btn_sliderleft_xpath).click()
+
+    def clickHome(self):
+        self.driver.find_element(By.XPATH,self.btn_home_xpath).click()

@@ -30,4 +30,5 @@ class TestHomePage:
         self.driver.back()
         self.hp.clickSliderLeft()
         self.hp.clickPrograms()
+        self.hp.clickHome()
         self.driver.close()
