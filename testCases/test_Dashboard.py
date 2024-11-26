@@ -4,8 +4,8 @@ from pageObjects.DashboardPageObjects import DashboardPage
 import os
 from utilities.readProperties import ReadConfig
 
-class TestHomePage:
-    def test_Home_Page(self):
+class TestDashboardPage:
+    def test_Dashboard_Page(self):
         baseURL = ReadConfig.getApplicationURL()
         user = ReadConfig.getUseremail()
         password = ReadConfig.getPassword()

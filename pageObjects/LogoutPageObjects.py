@@ -3,8 +3,8 @@ from selenium.webdriver.common.by import By
 
 class LogoutPage():
     # Locators
-    drpdwn_accout_xpath = "/html/body/app-root/app-header/div/nav/div/div[2]/ul/button/span[2]"
-    btn_logout_xpath = "/html/body/div[3]/div[2]/div/div/div/button/span"
+    drpdwn_accout_xpath = "/html/body/app-root/app-header/div/nav/div/div[2]/ul/button/span[2]/span"
+    btn_logout_xpath = '//*[@id="mat-menu-panel-0"]/div/button'
 
     # constructor
     def __init__(self,driver):

@@ -5,9 +5,9 @@ from pageObjects.LogoutPageObjects import LogoutPage
 import os
 from utilities.readProperties import ReadConfig
 
-class TestLogin:
+class TestLogout:
     @pytest.mark.sanity
-    def test_login(self):
+    def test_logout(self):
         baseURL = ReadConfig.getApplicationURL()
         user = ReadConfig.getUseremail()
         password = ReadConfig.getPassword()

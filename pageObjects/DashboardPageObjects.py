@@ -13,10 +13,10 @@ class DashboardPage():
 
     # action methods
     def selectTimesheets(self):
-        self.driver.find_element(By.XPATH,self.btn_timesheets_xpath).click()
+        self.driver.find_element(By.XPATH,self.sdbr_timesheets_xpath).click()
 
     def selectEmployees(self):
-        self.driver.find_element(By.XPATH,self.btn_employees_xpath).click()
+        self.driver.find_element(By.XPATH,self.sdbr_employees_xpath).click()
     
     def selectPrograms(self):
-        self.driver.find_element(By.XPATH,self.btn_programs_xpath).click()
+        self.driver.find_element(By.XPATH,self.sdbr_programs_xpath).click()
