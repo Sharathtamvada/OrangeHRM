@@ -25,6 +25,7 @@ class TestDashboardPage:
         self.dp = DashboardPage(self.driver)
         self.dp.selectTimesheets()
         self.driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + "timesheets_page.png")
+        self.dp.clickCollapse()
         self.dp.selectEmployees()
         self.driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + "employees_page.png")
         self.dp.selectPrograms()
