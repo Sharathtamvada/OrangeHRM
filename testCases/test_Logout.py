@@ -1,6 +1,7 @@
 import pytest
 from selenium import webdriver
 from pageObjects.LoginPageObjects import LoginPage
+from pageObjects.LogoutPageObjects import LogoutPage
 import os
 from utilities.readProperties import ReadConfig
 
@@ -22,7 +23,7 @@ class TestLogin:
         self.lp.setUserName(user)
         self.lp.setPassword(password)
         self.lp.clickLogin()
-        self.driver.save_screenshot(
-            os.path.abspath(os.curdir) + "\\screenshots\\" + "home_page.png"
-        )
+        self.lop = LogoutPage(self.driver)
+        self.lop.clickAccount()
+        self.lop.clickLogout()
         self.driver.close()
