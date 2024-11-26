@@ -1,7 +1,7 @@
 import pytest
 from selenium import webdriver
 from pageObjects.LoginPageObjects import LoginPage
-from pageObjects.LogoutPageObjects import LogoutPage
+from pageObjects.UploadPageObjects import UploadPage
 import os
 from utilities.readProperties import ReadConfig
 
@@ -23,8 +23,7 @@ class TestLogin:
         self.lp.setUserName(user)
         self.lp.setPassword(password)
         self.lp.clickLogin()
-        self.lop = LogoutPage(self.driver)
-        self.lop.clickAccount()
-        self.driver.save_screenshot(os.path.abspath(os.curdir) + "\\screenshots\\" + "logout_page.png")
-        self.lop.clickLogout()
+        self.up = UploadPage(self.driver)
+        self.up.clickUploadFile()
+        self.up.clickChooseFile()
         self.driver.close()
